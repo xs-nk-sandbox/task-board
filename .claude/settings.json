@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "Edit": [
+      {
+        "matcher": "\\.(ts|tsx)$",
+        "command": "npx eslint --fix {{file_path}}",
+        "description": "TypeScript/TSXファイル編集時に自動lint"
+      }
+    ],
+    "Write": [
+      {
+        "matcher": "\\.(ts|tsx)$",
+        "command": "npx eslint --fix {{file_path}}",
+        "description": "TypeScript/TSXファイル作成時に自動lint"
+      }
+    ],
+    "SessionStart": [
+      {
+        "command": "git status",
+        "description": "セッション開始時にgit statusを表示"
+      }
+    ]
+  }
+}
