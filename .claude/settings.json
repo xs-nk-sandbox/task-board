@@ -1,4 +1,7 @@
 {
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
   "hooks": {
     "PostToolUse": [
       {
@@ -6,7 +9,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npx eslint --fix {{file_path}}",
+            "command": "case '{{file_path}}' in *.ts|*.tsx|*.js|*.jsx) npx eslint --fix '{{file_path}}' ;; esac",
             "description": "TypeScript/TSXファイル編集時に自動lint"
           }
         ]
@@ -16,7 +19,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npx eslint --fix {{file_path}}",
+            "command": "case '{{file_path}}' in *.ts|*.tsx|*.js|*.jsx) npx eslint --fix '{{file_path}}' ;; esac",
             "description": "TypeScript/TSXファイル作成時に自動lint"
           }
         ]
