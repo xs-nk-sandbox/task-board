@@ -4,7 +4,7 @@
       "Bash(curl *)",
       "Bash(npm run *)",
       "Bash(npx prisma *)",
-      "Bash(node *)",
+      "Bash(node *)"
     ]
   }
 }
